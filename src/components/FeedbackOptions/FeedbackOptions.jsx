@@ -1,19 +1,20 @@
 import { Component } from "react";
 
-// Buttons
+import { Box } from "./FeedbackOptions.style";
+import { Btn } from "./FeedbackOptions.style";
 
 class FeedbackOptions extends Component {
   render() {
     const {options, onLeaveFeedback} = this.props
 
     return (
-      <div>
+      <Box>
         {options.map((item) => {
           return (
-            <button key={item} type="button" onClick={() => onLeaveFeedback(item)}>{item}</button>
+            <Btn key={item} grade={item} type="button" onClick={() => onLeaveFeedback(item)}>{item}</Btn>
           )
         })}
-      </div>
+      </Box>
     );
   }
 }

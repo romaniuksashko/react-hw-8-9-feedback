@@ -1,6 +1,7 @@
 import { Component } from "react";
 
-// Text
+import { Percentage } from "./Statistics.style";
+import { Summary } from "./Statistics.style";
 
 class Statistics extends Component {
   render() {
@@ -11,8 +12,8 @@ class Statistics extends Component {
         <p>Good: {good}</p>
         <p>Neutral: {neutral}</p>
         <p>Bad: {bad}</p>
-        <p>Total: {total}</p>
-        <p>Positive Feedback: {positivePercentage ? positivePercentage : 0}%</p>
+        <Summary>Total: {total}</Summary>
+        <Percentage num={positivePercentage}>Positive Feedback: {positivePercentage ? positivePercentage : 0}%</Percentage>
       </div>
     );
   }
